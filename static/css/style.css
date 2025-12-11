@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+    height: 100vh;
+    /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* контейнер для всех снежинок */
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* отдельная снежинка */
+.snowflake {
+    position: absolute;
+    top: -20px;
+    color: white;
+    animation: fall linear infinite;
+    text-shadow: 
+    0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 20px #ffffff,
+    0 0 40px #ffffff;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(100vh); }
+}
+
+.bg {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:  blur(5px);
+}
+
+
+
+
+
+.content{
+    color: white;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.048);
+    padding: 20px;
+    backdrop-filter: blur(15px);   
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 700px;
+    height: 500px;
+    text-align: center;
+    filter: drop-shadow(2px 4px 6px black);   
+}
+.link {
+    display: inline-block;
+    margin: 5px 100px;
+    padding: 10px 10px;
+    color: rgb(15, 89, 139);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+    /* font-family: "Chela One", system-ui; */
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    filter: contrast(150%);
+
+}
+.link:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 50, 50, 0.279);
+}
+
+h2 {
+    position: absolute;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 220px;
+    color: rgba(255, 255, 255, 0.224);
+    top: 150px;
+    filter: drop-shadow(2px 4px 6px black);
+    filter: contrast(150%);
+
+}
+/* username */
+h3{
+    font-family: "Jersey 10", sans-serif;
+    color: white;
+    font-size: 28px;
+    margin-top: 10; 
+    margin-bottom: 0;
+    padding: 0;
+    filter: contrast(150%);
+    text-shadow: 
+    0 0 15px #c80e0e,
+    0 0 20px hsl(0, 0%, 0%);
+}
+
+.avatar {
+    width: 104px;           /* размер аватара */
+    height: 104px;          /* одинаковая ширина и высота */
+    border-radius: 50%;     /* делает картинку круглой */
+    object-fit: cover;      /* обрезает лишнее, чтобы картинка не деформировалась */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* лёгкая тень */
+    transition: transform 0.3s;
+    
+}
+.avatar :hover {
+    transform: scale(1.1); 
+}
+
+/* stickers */
+h4{
+    padding: 5px;
+    color: red;
+    text-shadow: 
+        0 0 5px #ff4444,
+        0 0 10px #ff4444,
+        0 0 20px #ff4444,
+        0 0 40px hsl(0, 100%, 57%);
+
+        margin: 0;   
+
+        font-size: 20px;
+}
+
+/* описание */
+h1{
+    font-size: 18px;
+    padding-right: 500px;
+    padding-top: 20px; 
+    color: red;
+    font-family: "Jersey 10", sans-serif;
+    text-shadow: 
+        0 0 15px #ff4444,
+        0 0 20px hsl(0, 100%, 57%);
+    filter: contrast(150%);
+}
+
+/* country */
+h5{
+    position: absolute;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 20px;
+    color: gray;
+    filter: brightness(1);
+    top: 250px;
+    padding-left: 310px;
+
+}
+/* text */
+h6{
+    position: absolute;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 20px;
+    padding-left: 290px;
+    top: 270px;
+    color: gray;
+    filter: brightness(1);
+}
+
+  
+
+.location {
+    position: absolute; 
+    top: 285px;
+    left: 310px;
+
+    width: 13px;
+    height: 18px;
+
+    filter: drop-shadow(0 0 5px #ff0000)
+            drop-shadow(0 0 10px #ff0000)
+            drop-shadow(0 0 15px #ff0000);
+}
+
+.soundcloud {
+    position: absolute; 
+    top: 367px;
+    left: 270px;
+
+    width: 40px;
+    height: 40px;
+
+    filter: drop-shadow(0 0 5px #ff7700)
+            drop-shadow(0 0 15px #ff7700);
+
+    transition: transform 0.6s;
+}
+
+.soundcloud:hover {
+    transform: scale(1.1);
+}
+
+.steam {
+    position: absolute; 
+    top: 370px;
+    left: 340px;
+
+    width: 55px;
+    height: 30px;
+
+    filter: drop-shadow(0 0 5px #00aaff)
+            drop-shadow(0 0 15px #00aaff);
+
+    transition: transform 0.6s;
+}
+
+
+.steam:hover {
+    transform: scale(1.1);
+}
+
+.discord {
+    position: absolute; 
+    top: 370px;
+    left: 420px;
+
+    width: 30px;
+    height: 30px;
+
+    filter: drop-shadow(0 0 5px #7289da)
+            drop-shadow(0 0 15px #7289da);
+
+    transition: transform 0.6s;
+}
+.discord:hover {
+    transform: scale(1.1);
+}
+
+.cat{
+    position: absolute;
+    top: 350px;
+    right: 720px;
+}
+
+.sword {
+    position: absolute;
+    left: 520px; /* Use 'left' instead of 'padding-left' */
+    bottom: 1px; /* Use 'bottom' instead of 'padding-bottom' */
+    top: 150px;
+    filter: brightness(0.7);
+}
+
+.spotify-wrapper {
+    position: absolute;
+    top: 440px;
+    right: 110px;
+    width: 500px;
+    height: 100px;
+}
+
+.spotify-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+/* ------------------  MOBILE MODE  ------------------ */
+@media (max-width: 600px) {
+
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+        overflow-x: hidden;
+    }
+
+    /* главный контейнер */
+    .content {
+        width: 85%;
+        height: auto;
+        padding: 20px 10px;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+
+    /* огромная надпись на фоне */
+    h2 {
+        font-size: 70px;
+        top: 10px;
+    }
+
+    /* аватар */
+    .avatar {
+        width: 85px;
+        height: 85px;
+        margin-top: 15px;
+    }
+
+    /* ник */
+    h3 {
+        font-size: 26px;
+        margin-top: 10px;
+    }
+
+    /* описание */
+    h1 {
+        font-size: 16px;
+        padding-right: 0;
+        padding-top: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* страна */
+    h5, h6 {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 0 0;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    /* иконка локации */
+    .location {
+        position: relative;
+        top: -25px;
+        left: -58px;
+        margin: 5px auto;
+        display: block;
+    }
+
+    /* блок соцсетей */
+    .soundcloud,
+    .steam,
+    .discord {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 15px 8px;
+        display: inline-block;
+    }
+
+    .soundcloud {
+        width: 32px;
+        height: 32px;
+    }
+
+    .steam {
+        width: 48px;
+        height: 26px;
+    }
+
+    .discord {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* убрать декоративные элементы */
+    .cat,
+    .sword {
+        display: none !important;
+    }
+
+    /* снежинки меньше и медленнее */
+    .snowflake {
+        font-size: 10px;
+        opacity: 0.8;
+    }
+
+    .spotify-wrapper {
+        position: relative;
+        top: 20px;
+        right: 0;
+        margin: 15px auto;
+        width: 90%;
+        height: 95px;
+    }
+
+    .spotify-wrapper iframe {
+        width: 100%;
+        height: 95px;
+    }
+}
+
+}
