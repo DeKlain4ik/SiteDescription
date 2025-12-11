@@ -21,9 +21,7 @@ Dive in to find my socials, favorite tunes, and some fun digital flair ✨
 ## 🎵 Vibe Check: Spotify Playlist
 
 <p align="center">
-    <iframe src="https://open.spotify.com/embed/track/2yjrm0IPgEdGNHJLSNNDWh?utm_source=generator&theme=0" 
-        width="100%" height="100" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy" style="border-radius:12px; box-shadow: 0 0 15px #1DB954, 0 0 30px rgba(29, 185, 84, 0.5);"></iframe>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2yjrm0IPgEdGNHJLSNNDWh?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </p>
 
 ---
